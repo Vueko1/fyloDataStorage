@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 10%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Raleway';
+    color: white;
+}
+
+.main {
+    display: grid;
+    align-items: center;
+    grid-gap: 1em;
+}
+
+.storage {
+    text-align: center;
+    position: relative;
+}
+
+.main > div {
+    background-color: hsl(228, 56%, 26%);
+    padding: 2em;
+}
+
+.main div:first-child {
+    border-radius: 0.7em 5em 0.7em 0.7em;
+}
+
+.main div:last-child {
+    border-radius: 0.7em ;
+}
+
+.fyloHeading {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 2em;
+    grid-column-gap: 2em;
+    grid-auto-rows: 4em;
+}
+
+.fyloHeading img:nth-child(1) {
+    grid-column: 1 / 4;
+}
+
+.fyloHeading div:nth-child(2) {
+    grid-column: 1 / 2;
+}
+
+.fyloHeading div:nth-child(3) {
+    grid-column: 2 / 3;
+}
+
+.fyloHeading div:nth-child(4) {
+    grid-column: 3 / 4;
+}
+
+.fyloHeading img:first-child ~ div {
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 1em;
+    min-width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress-bar {
+    background-color: hsl(229, 57%, 11%);
+    width: 100%;
+    height: 1em;
+    padding: 0.2em;
+    border-radius: 1em;
+    margin-bottom: 0.5em;
+}
+
+#progress-value {
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 100%;
+    width: 82.5%;
+    padding: 0.1em;
+    text-align: right;
+}
+
+.gigabytes {
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 60%;
+    padding: 1em 3em;
+    left: 20%;
+}
+
+.gigabytes p {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+}
+
+.gigabytes span {
+    color: black;
+    font-size: 2em;
+}
+
+.storage > p {
+    padding-bottom: 2em;
+}
+
+.under-progress-1{
+    float: left;
+}
+
+.under-progress-2{
+    float: right;
+}
+
+.storage p:first-child > span {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 900px) {
+    
+    .main {
+        grid-template-columns: 1fr 2fr;
+        align-items: flex-end;
+        
+    }
+    
+    .gigabytes {
+        clip-path: polygon(0% 0%, 100% 0, 100% 75%, 100% 91%, 95% 75%, 0 75%);
+        padding: 1.5em 0 3em;
+        width: 40%;
+        top: -40%;
+        left: 50%;
+    }
+    
+    
+    .storage > p:first-child {
+        text-align: left;
+    }
+    
+    body {
+        background-image: url(images/bg-desktop.png);
+        background-size: contain;
+        background-position: bottom;
+    }
+    
+    .main > div {
+        padding: 3em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
